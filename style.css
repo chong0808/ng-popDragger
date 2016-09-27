@@ -1,0 +1,94 @@
+li{
+	list-style: none;
+}
+
+.popBox{
+	width: 640px;
+	position: absolute;
+	box-shadow: 1px 1px 1px 1px rgba(75,99,107,.5); 
+	border-radius: 4px;
+	left: 50%;
+	margin-left: -320px;
+	top:15%;
+	z-index: 999;
+	background: #FFF;
+}
+.popBox .popPanel{
+	border:0;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+.popBox .panel-heading{
+	position: relative;
+}
+.popBox .popSel{
+	position: absolute;
+	right: 14px;
+	top: 10px;
+	z-index: 299;
+}
+.popBox .listCon .popSearch{
+	width:238px;
+	height: 28px;
+	border-radius: 15px;
+	border:0;
+	outline: none;
+	color: #FFF;
+	padding: 5px 10px;
+	background: rgba(255,255,255,.2);
+}
+.selBoxs-ng{
+	height: 25px;
+	line-height: 25px;
+	padding-left: 10px;
+	z-index: 9999;
+}
+.selBoxs-ng ul{
+	margin-left: -10px;
+	padding-left: 0;
+	margin-bottom: 0;
+	left: 0;
+}
+.selBoxs-ng ul li{
+	padding-left: 10px;
+	width: 100%;
+}
+.selBoxs-ng ul li:hover{
+	background: #FFF;
+	color:#000;
+}
+.selBoxs-ng i {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-color: #000 transparent transparent transparent;
+    z-index: 99;
+}
+.popBox .popTable{
+	border-right: 1px solid #C0C0C0;
+	border-left: 1px solid #C0C0C0;
+	height: 300px;
+	overflow: auto;
+}
+.popBox .popTable table{
+	/*height: 300px;*/
+	overflow: auto;
+	border-bottom: 1px solid #CCC;
+}
+.popBox .popTable thead tr{
+	height: 28px;
+	background: #E6E7E8;
+}
+.popBox .popTable th{
+	width: 150px;
+	text-align: center;
+}
+.popBox .popTable td{
+	width: 150px;
+	text-align: center;
+	height: 25px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./lib/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script type="text/javascript" src='./lib/js/angular.js'></script>
+	<script type="text/javascript" src='./lib/js/jquery-2.1.4.min.js'></script>
+	<script type="text/javascript" src='./lib/js/bootstrap.js'></script>
+	<script type="text/javascript" src='./js.js'></script>
+</head>
+<body ng-app='myapp' ng-controller='myCtr'>
+		<div class="popBox assetPopBox" ng-hide="assetsPop" draggable>
+			<div class="panel panel-primary popPanel">
+				<div class="panel-heading">
+					<div class="listCon">
+						<input class="popSearch" type="text" name="search" placeholder="搜索" ng-model='filterPop'>
+					</div>
+					<div class="popSel">
+						<div class="selBoxs-ng">
+							<div ctr-down list-items="itemsArr"  data-style='[{"width":120,"isScroll":false,"bgColor":"#5C95C6","hoverBgColor":"green"}]'  select-item='popQuery'></div>
+						</div>
+					</div>
+				</div>
+				<div class="popTable">
+					<table>
+						<thead>
+							<tr>
+								<th class="probiderList">资产名称</th>
+								<th>单位</th>
+								<th>规格</th>
+								<th>型号</th>
+								<th  style="display:none;">单价</th>
+								<th>资产类别</th>
+								<th>资产编号</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat='item in items| myFilter:{"filterOne":filterPop,"filterTwo":popQuery} track by item.name'  ng-click='surt($event,item)'>
+								<td ng-bind='item.name'></td>
+								<td ng-bind='item.dw'></td>
+								<td ng-bind='item.gg'></td>
+								<td ng-bind='item.xh'></td>
+								<td ng-bind='item.dj' style="display:none;"></td>
+								<td ng-bind='item.lb'></td>
+								<td ng-bind='item.num'></td>
+							</tr>
+						</tbody>
+				</table>
+			</div>
+			<div class="panel-footer">
+				<div class="popFooter">
+					<div class="popBtn">
+						<p>
+							<button type="button" class="btn btn-primary" value="0" ng-click='togglePop($event,"assetsPop")'>取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
